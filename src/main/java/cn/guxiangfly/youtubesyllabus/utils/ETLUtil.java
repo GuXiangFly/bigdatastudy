@@ -31,4 +31,3 @@ public class ETLUtil {
         return etlString.toString();
     }
 }
-r
