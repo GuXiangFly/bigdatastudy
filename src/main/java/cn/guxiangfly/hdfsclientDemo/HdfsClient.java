@@ -49,4 +49,11 @@ public class HdfsClient {
         IOUtils.closeStream(fileInputStream);
         IOUtils.closeStream(fsDataOutputStream);
     }
+
+
+    @Test
+    public void  decodeFileInHdfs(){
+        Configuration configuration = new Configuration();
+        configuration.set("fs.defaults","http://hadoop");
+    }
 }
