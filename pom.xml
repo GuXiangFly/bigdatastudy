@@ -42,12 +42,52 @@
             <version>2.5.0-cdh5.3.6</version>
         </dependency>
 
-
         <dependency>
             <groupId>org.apache.hive</groupId>
             <artifactId>hive-exec</artifactId>
             <version>0.13.1-cdh5.3.6</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-java</artifactId>
+            <version>1.6.1</version>
+            <!-- provided在这表示此依赖只在代码编译的时候使用，运行和打包的时候不使用 -->
+            <!--<scope>provided</scope>-->
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-streaming-java_2.11</artifactId>
+            <version>1.6.1</version>
+            <!--<scope>provided</scope>-->
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-scala_2.11</artifactId>
+            <version>1.6.1</version>
+            <!--<scope>provided</scope>-->
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-streaming-scala_2.11</artifactId>
+            <version>1.6.1</version>
+            <!--<scope>provided</scope>-->
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.bahir</groupId>
+            <artifactId>flink-connector-redis_2.11</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-statebackend-rocksdb_2.11</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+
+
+
     </dependencies>
     <build>
         <finalName>wordcount</finalName>
@@ -89,7 +129,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>cn.guxiangfly.demo.WordCount</mainClass>
+                            <mainClass>cn.guxiangfly.flinkstudy.scalacode.streaming.customSource.StreamingDemoWithNoParallelSourceScala</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
